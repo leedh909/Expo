@@ -34,6 +34,42 @@ export default class SelectBox extends Component {
                 <Picker.Item label="녹턴" value="녹턴" />
             </Picker>
         );
+    }else if(this.state.position === "미드"){
+        return(
+            <Picker 
+                selectedValue={this.state.champion}
+                onValueChange={champion=>this.setState({champion})}
+                style={{ width: 160, postion: 'absolute',fontSize:10 }}
+                mode="dropdown"
+                itemStyle={{ color:'red', fontWeight:'900', fontSize: 18, padding:5}}>
+                <Picker.Item label="루시안" value="루시안" />
+                <Picker.Item label="제드" value="제드" />
+            </Picker>
+        );
+    }else if(this.state.position === "봇"){
+        return(
+            <Picker 
+                selectedValue={this.state.champion}
+                onValueChange={champion=>this.setState({champion})}
+                style={{ width: 160, postion: 'absolute',fontSize:10 }}
+                mode="dropdown"
+                itemStyle={{ color:'red', fontWeight:'900', fontSize: 18, padding:5}}>
+                <Picker.Item label="케이틀린" value="케이틀린" />
+                <Picker.Item label="베인" value="베인" />
+            </Picker>
+        );
+    }else if(this.state.position === "서폿"){
+        return(
+            <Picker 
+                selectedValue={this.state.champion}
+                onValueChange={champion=>this.setState({champion})}
+                style={{ width: 160, postion: 'absolute',fontSize:10 }}
+                mode="dropdown"
+                itemStyle={{ color:'red', fontWeight:'900', fontSize: 18, padding:5}}>
+                <Picker.Item label="레오나" value="레오나" />
+                <Picker.Item label="블크" value="블크" />
+            </Picker>
+        );
     }
   }
   

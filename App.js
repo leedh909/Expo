@@ -1,12 +1,12 @@
 import React from 'react';
 import { StyleSheet, Text, TextInput, View } from 'react-native';
-import Navigation from './Navigation';
+import Input from './input';
 
 export default function App() {
 
   return (
     <View style={{ flex:1 }}>
-      <Navigation />      
+      <Input />      
     </View>
   );
 }

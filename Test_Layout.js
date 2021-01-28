@@ -13,11 +13,11 @@ export default function App() {
         <View style={styles.container}>
           <View style={{width:'100%',height:'20%',backgroundColor:'yellow'}}></View>
 
-          <View style={{flex:1, flexDirection: 'row', backgroundColor: 'grey'}}>
-            <View style={{width:'50%',height:'20%',backgroundColor:'pink'}}></View>
+          <View style={{flex:1, flexDirection: 'row' }}>
+            <View style={{width:'50%',height:'25%',backgroundColor:'pink'}}></View>
             <View style={styles.container}>
-              <View style={{width:'100%',height:'10%',backgroundColor:'green'}}></View>
-              <View style={{width:'100%',height:'10%',backgroundColor:'black'}}></View>
+              <View style={{width:'100%',height:'12.5%',backgroundColor:'green'}}></View>
+              <View style={{width:'100%',height:'12.5%',backgroundColor:'black'}}></View>
             </View>
           </View>
         </View>

@@ -24,8 +24,8 @@ const Tab = createBottomTabNavigator();
 function MyTabs() {
   return (
     <Tab.Navigator >
-      <Tab.Screen name="AScreen" component={AScreen} style={{fontSize:30}}/>
-      <Tab.Screen name="BScreen" component={BScreen} style={{fontSize:30}}/>
+      <Tab.Screen name="AScreen" component={AScreen}  />
+      <Tab.Screen name="BScreen" component={BScreen}  />
     </Tab.Navigator>
   );
 }
