@@ -16,7 +16,6 @@ export default class App extends React.Component {
             isLoading: false,
             dataSource: responseJson.movies,
           },
-          function() {}
         );
       })
       .catch(error => {
