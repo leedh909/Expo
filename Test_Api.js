@@ -1,7 +1,7 @@
 import React from 'react';
 import { FlatList, ActivityIndicator, Text, View } from 'react-native';
 
-export default class App extends React.Component {
+export default class Test_Api extends React.Component {
   constructor(props) {
     super(props);
     this.state = { isLoading: true };
@@ -38,7 +38,7 @@ export default class App extends React.Component {
           data={this.state.dataSource}
           renderItem={({ item }) => (
             <Text>
-              {item.title}, {item.releaseYear}
+              Title: {item.title} / Year: {item.releaseYear}{"\n"}
             </Text>
           )}
           keyExtractor={({ id }, index) => id}

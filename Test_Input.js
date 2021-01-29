@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet,TextInput } from 'react-native';
 
-class Input extends Component{
+class Test_Input extends Component{
     constructor(){
         super();
         this.state={
@@ -45,4 +45,4 @@ const style= StyleSheet.create({
 });
 
 
-export default Input;
+export default Test_Input;

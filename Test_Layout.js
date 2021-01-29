@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-export default function App() {
+export default function Test_Layout() {
   return (
     <View style={styles.container}>
       <View style={{width:'100%', height:'10%',backgroundColor:'red'}}></View>

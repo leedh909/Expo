@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { SafeAreaView, Text } from 'react-native';
 import { Picker } from '@react-native-picker/picker'
 
-export default class SelectBox extends Component {
+export default class Test_Selectbox extends Component {
     
   state = {
     position: '탑',
