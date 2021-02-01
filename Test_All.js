@@ -6,6 +6,7 @@ import Test_Layout from './Test_Layout';
 import Test_Input from './Test_Input';
 import Test_Selectbox from './Test_Selectbox';
 import Test_Api from './Test_Api';
+import Test_find from './Test_find';
 
 const Tab = createBottomTabNavigator();
 
@@ -16,6 +17,7 @@ function MyTabs() {
       <Tab.Screen name="2.Test_Input" component={Test_Input}  />
       <Tab.Screen name="3.Test_Selectbox" component={Test_Selectbox}  />
       <Tab.Screen name="4.Test_Api" component={Test_Api}  />
+      <Tab.Screen name="5.Test_find" component={Test_find}  />
     </Tab.Navigator>
   );
 }
