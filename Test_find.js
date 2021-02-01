@@ -2,6 +2,7 @@ import React from 'react';
 import { FlatList, ActivityIndicator, Text, View, Button, TextInput } from 'react-native';
 import { Picker } from '@react-native-picker/picker'
 import { set } from 'react-native-reanimated';
+import axios from 'axios';
 
 export default class Test_find extends React.Component {
   constructor(props) {
@@ -16,33 +17,51 @@ export default class Test_find extends React.Component {
   }
 
   componentDidMount() {
-    return fetch('https://reactnative.dev/movies.json')
-      .then(response => response.json())
-      .then(responseJson => {
-        this.setState(
-          {
-            items:responseJson.movies,
-            isLoading: false,
-          },
-        );
+    return (
+      // fetch('https://reactnative.dev/movies.json')
+      // .then(response => response.json())
+      // .then(responseJson => {
+      //   this.setState(
+      //     {
+      //       items:responseJson.movies,
+      //       isLoading: false,
+      //     },
+      //   );
+      // })
+      // .catch(error => {
+      //   console.error(error);
+      // })
+      axios({
+        url:'https://reactnative.dev/movies.json',
+        method:'get',
+      }).then((response)=>{
+        this.setState({
+          items:response.data.movies,
+          isLoading: false,
+        });
       })
-      .catch(error => {
-        console.error(error);
-      });
+      
+    )
   }
+
   select_click = (e) =>{
       //alert(this.state.input_v);
       if(this.state.select_v === 'Title'){
         for(let i=0;i < this.state.items.length;i++){
             // alert("타이틀"+this.state.items[i].title);
-        if(this.state.items[i].title.toString()===this.state.input_v.toString()){
-            setTimeout(()=>{
-                // alert('들어옴');
-                this.setState({
-                    result: this.state.items[i].title + ' / ' + this.state.items[i].releaseYear
-                });
-            }, 0);
-        }
+          if(this.state.items[i].title.toString()===this.state.input_v.toString()){
+              setTimeout(()=>{
+                  // alert('들어옴');
+                  this.setState({
+                      result: this.state.items[i].title + ' / ' + this.state.items[i].releaseYear
+                  });
+              }, 0);
+              break;
+          }else{
+            this.setState({
+              result: '검색하신 값이 없습니다.',
+            });
+          }
         }
         if(this.state.result===''){
             //alert('검색 값 없을때');
@@ -58,8 +77,13 @@ export default class Test_find extends React.Component {
                 this.setState({
                   result: this.state.items[i].title + ' / ' + this.state.items[i].releaseYear,
                 });
-                //alert(this.state.result);
-              },0);
+                // alert(this.state.result);
+              },1);
+              break;
+            }else{
+              this.setState({
+                result: '검색하신 값이 없습니다.',
+              });
             }
           }
           if (this.state.result === '') {
